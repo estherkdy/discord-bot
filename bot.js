@@ -30,7 +30,7 @@ bot.on('message', message => {
   }
 
   
-  if ((message.content.toLocaleLowerCase()).includes('frazee')) {
+  if ((message.content.toLowerCase()).includes('frazee')) {
     message.reply('This is a Frazee!', {files:['./media/frazee.png']});
   }
 
@@ -53,7 +53,7 @@ bot.on('message', message => {
     message.react("👍");
   }
 
-  if(message.author.id === process.env.KIMMY || message.author.id === process.env.ANDRE) {
+  if((message.content.toLowerCase()).includes('so true')) {
     message.channel.send('SO TRUE BESTIE');
   }
 });
