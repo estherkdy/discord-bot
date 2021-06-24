@@ -16,8 +16,6 @@ const bot = new Discord.Client();
 bot.on('ready', () => {
   console.log('I am ready!');
 });
-
-  
  
 // Create an event listener for messages
 bot.on('message', message => {
@@ -26,12 +24,19 @@ bot.on('message', message => {
 
   if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
 
-  if (message.mentions.has(bot.user.id)) message.react("👍");
+  if (message.mentions.has(bot.user.id)) {
+    message.channel.send('Welcome');
+    message.react("👍");
+  }
 
   // If the message is "ping"
   if (message.content === 'frazee') {
     message.reply('This is a Frazee!', {files:['./media/frazee.png']});}
 
+    if (message.content === 'hello') {
+      message.reply('hi');
+
+    }
   if (message.content === 'ping') {
     // Send "pong" to the same channel
     message.channel.send('pong');
