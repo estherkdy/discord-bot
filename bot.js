@@ -1,9 +1,13 @@
-'use strict';
+'use strict'; // The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+              // With strict mode, you can not, for example, use undeclared variables.
 
 // Import the discord.js module
 const Discord = require('discord.js');
 
-// environment variables, unseen to naked eye
+// for configurations variables that are public
+const {prefix} = require('./config.json');
+
+// environment variables, unseen to the naked eye
 require('dotenv').config();
 
 // Create an instance of a Discord bot
@@ -38,23 +42,23 @@ bot.on('message', message => {
     message.reply('JOE MAMA!!', {files:['./media/vna.png']});
   }
 
-  if (message.content === 'hello') {
+  if (message.content === `${prefix}hello`) {
     message.channel.send('hi');
   }
 
   // If the message is "ping"
-  if (message.content === 'ping') {
+  if (message.content === `${prefix}ping`) {
     // Send "pong" to the same channel
     message.channel.send('pong');
   }
 
-  if (message.content === 'stan') {
+  if (message.content === `${prefix}stan`) {
     // Send "pong" to the same channel
     message.channel.send('loona');
   }
 
-  if (message.channel.id === "polls") {
-    message.react("👍");
+  if (message.channel.id === 'polls') {
+    message.react('👍');
   }
 
   if((message.content.toLowerCase()).includes('so true')) {
