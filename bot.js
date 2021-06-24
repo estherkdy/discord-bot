@@ -25,7 +25,7 @@ bot.on('message', message => {
   if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
 
   if (message.mentions.has(bot.user.id)) {
-    message.channel.send('Welcome');
+    message.channel.send('die');
     message.react("👍");
   }
 
