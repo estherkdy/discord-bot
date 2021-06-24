@@ -34,6 +34,10 @@ bot.on('message', message => {
     message.reply('This is a Frazee!', {files:['./media/frazee.png']});
   }
 
+  if ((message.content.toLowerCase()).includes('joe')) {
+    message.reply('JOE MAMA!!', {files:['./media/vna.png']});
+  }
+
   if (message.content === 'hello') {
     message.channel.send('hi');
   }
