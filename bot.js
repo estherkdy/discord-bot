@@ -34,7 +34,7 @@ bot.on('message', message => {
     message.reply('This is a Frazee!', {files:['./media/frazee.png']});}
 
     if (message.content === 'hello') {
-      message.reply('hi');
+      message.channel.send('hi');
 
     }
   if (message.content === 'ping') {
