@@ -30,7 +30,7 @@ bot.on('message', message => {
   }
 
   // If the message is "ping"
-  if (message.content === 'frazee') {
+  if (message.content.includes('frazee') || message.content.includes('Frazee')) {
     message.reply('This is a Frazee!', {files:['./media/frazee.png']});}
 
     if (message.content === 'hello') {
