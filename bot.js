@@ -29,14 +29,16 @@ bot.on('message', message => {
     message.react("👍");
   }
 
+  
+  if ((message.content.toLocaleLowerCase()).includes('frazee')) {
+    message.reply('This is a Frazee!', {files:['./media/frazee.png']});
+  }
+
+  if (message.content === 'hello') {
+    message.channel.send('hi');
+  }
+
   // If the message is "ping"
-  if (message.content.includes('frazee') || message.content.includes('Frazee')) {
-    message.reply('This is a Frazee!', {files:['./media/frazee.png']});}
-
-    if (message.content === 'hello') {
-      message.channel.send('hi');
-
-    }
   if (message.content === 'ping') {
     // Send "pong" to the same channel
     message.channel.send('pong');
@@ -47,9 +49,12 @@ bot.on('message', message => {
     message.channel.send('loona');
   }
 
+  if (message.channel.id === "polls") {
+    message.react("👍");
+  }
+
   if(message.author.id === process.env.KIMMY || message.author.id === process.env.ANDRE) {
-  
-      message.channel.send('SO TRUE BESTIE');
+    message.channel.send('SO TRUE BESTIE');
   }
 });
  
