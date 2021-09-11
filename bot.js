@@ -60,10 +60,6 @@ bot.on('message', message => {
 }
   
   
-    if (message.content == 'jimin') {
-    message.reply('지민이는 하은이꺼야!');
-  }
-  
 
   // If the message is "ping"
   if (message.content === `${prefix}ping`) {
