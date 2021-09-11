@@ -54,7 +54,7 @@ bot.on('message', message => {
     message.channel.send('hi');
   }
   
-  if(input == "!8BALL")
+  if(input == "!jelly")
 {
     bot.reply(message, 'Your anwser is: ' + magicBall());
 }
