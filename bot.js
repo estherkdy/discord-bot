@@ -56,7 +56,7 @@ bot.on('message', message => {
   
   if(input == "!jelly")
 {
-    bot.reply(message, 'Your anwser is: ' + magicBall());
+    bot.reply(message, 'Your answer is: ' + magicBall());
 }
   
   
