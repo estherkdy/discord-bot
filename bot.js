@@ -15,11 +15,6 @@ const bot = new Discord.Client();
 
 // function for 8ball
 
-function magicBall() {
-    var rand = ['of course!', '아니...', '응아니야', 'yes~', 'have hope!', '응!'];
-
-    return rand[Math.floor(Math.random()*rand.length)];
-}
 
 /**
  * The ready event is vital, it means that only _after_ this will your bot start reacting to information
