@@ -13,7 +13,7 @@ require('dotenv').config();
 // Create an instance of a Discord bot
 const bot = new Discord.Client();
 
-// function for 8ball
+
 
 
 /**
@@ -48,11 +48,6 @@ bot.on('message', message => {
   if (message.content === `${prefix}hello`) {
     message.channel.send('hi');
   }
-  
-  if(input == "!jelly")
-{
-    bot.reply(message, 'Your answer is: ' + magicBall());
-}
   
   
 
