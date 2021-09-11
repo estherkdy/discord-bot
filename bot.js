@@ -13,7 +13,12 @@ require('dotenv').config();
 // Create an instance of a Discord bot
 const bot = new Discord.Client();
 
+// magic ball
+function magicBall() {
+    var rand = ['Yes', 'No', '응아니야', '당연하지', 'Maybe', 'Never', 'Of course'];
 
+    return rand[Math.floor(Math.random()*rand.length)];
+}
 
 
 /**
@@ -61,6 +66,11 @@ bot.on('message', message => {
     // Send "pong" to the same channel
     message.channel.send('loona');
   }
+  
+  if(input == "!jelly")
+{
+    bot.reply(message, 'Your anwser is: ' + magicBot());
+}
 
   if (message.channel.id === 'polls') {
     message.react('👍');
