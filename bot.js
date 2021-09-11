@@ -13,6 +13,14 @@ require('dotenv').config();
 // Create an instance of a Discord bot
 const bot = new Discord.Client();
 
+// function for 8ball
+
+function magicBall() {
+    var rand = ['of course!', '아니...', '응아니야', 'yes~', 'have hope!', '응!'];
+
+    return rand[Math.floor(Math.random()*rand.length)];
+}
+
 /**
  * The ready event is vital, it means that only _after_ this will your bot start reacting to information
  * received from Discord
@@ -45,6 +53,12 @@ bot.on('message', message => {
   if (message.content === `${prefix}hello`) {
     message.channel.send('hi');
   }
+  
+  if(input == "!8BALL")
+{
+    bot.reply(message, 'Your anwser is: ' + magicBall());
+}
+  
   
     if ((message.content.toLowerCase()).includes('지민')) {
     message.reply('지민이는 하은이꺼야!');
