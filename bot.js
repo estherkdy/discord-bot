@@ -62,7 +62,7 @@ bot.on('message', message => {
   }
 
   if((message.content.toLowerCase()).includes('so true')) {
-    message.channel.send('SO TRUE BESTIE');
+    message.channel.send('SO TRUE ');
   }
 });
  
