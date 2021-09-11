@@ -61,10 +61,7 @@ bot.on('message', message => {
     message.channel.send('loona');
   }
   
-  if(input == "!8BALL")
-{
-    bot.reply(message, 'Your anwser is: ' + magicBot());
-}
+
 
   if (message.channel.id === 'polls') {
     message.react('👍');
