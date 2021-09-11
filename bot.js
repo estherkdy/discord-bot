@@ -60,7 +60,7 @@ bot.on('message', message => {
 }
   
   
-    if ((message.content.toLowerCase()).includes('지민')) {
+    if (message.content == '지민') {
     message.reply('지민이는 하은이꺼야!');
   }
   
