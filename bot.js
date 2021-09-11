@@ -60,7 +60,7 @@ bot.on('message', message => {
 }
   
   
-    if (message.content == '지민') {
+    if (message.content == 'jimin') {
     message.reply('지민이는 하은이꺼야!');
   }
   
