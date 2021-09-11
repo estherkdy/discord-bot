@@ -13,12 +13,6 @@ require('dotenv').config();
 // Create an instance of a Discord bot
 const bot = new Discord.Client();
 
-// magic ball
-function magicBall() {
-    var rand = ['Yes', 'No', '응아니야', '당연하지', 'Maybe', 'Never', 'Of course'];
-
-    return rand[Math.floor(Math.random()*rand.length)];
-}
 
 
 /**
