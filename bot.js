@@ -45,6 +45,11 @@ bot.on('message', message => {
   if (message.content === `${prefix}hello`) {
     message.channel.send('hi');
   }
+  
+    if ((message.content.toLowerCase()).includes('지민')) {
+    message.reply('지민이는 하은이꺼야!');
+  }
+  
 
   // If the message is "ping"
   if (message.content === `${prefix}ping`) {
